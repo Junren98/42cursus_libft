@@ -6,7 +6,7 @@
 /*   By: tjun-ren <tjun-ren@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/16 16:59:13 by tjun-ren          #+#    #+#             */
-/*   Updated: 2021/09/23 17:05:05 by tjun-ren         ###   ########.fr       */
+/*   Updated: 2021/09/24 02:25:06 by tjun-ren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 // return to pointer to the allocated space
 // calloc(10, sizeof(int))
 #include "libft.h"
+#include <stddef.h>
 
 void	*ft_calloc(size_t nelem, size_t elsize)
 {

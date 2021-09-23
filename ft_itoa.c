@@ -6,7 +6,7 @@
 /*   By: tjun-ren <tjun-ren@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/21 12:17:49 by tjun-ren          #+#    #+#             */
-/*   Updated: 2021/09/22 17:57:05 by tjun-ren         ###   ########.fr       */
+/*   Updated: 2021/09/24 02:21:48 by tjun-ren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,6 @@
 // need to reverse
 #include <stdlib.h>
 #include "libft.h"
-
-/*size_t	ft_strlen(const char *c)
-{
-	char	*p;
-
-	p = (char *)c;
-	while (*p)
-		p++;
-	return (p - c);
-}*/
 
 static	int	nbr_len(int n)
 {
@@ -71,9 +61,10 @@ char	*ft_itoa(int n)
 	char	*ret;
 	long	nbr;
 
-	nbr = n;
-	if (!(ptr = (char *) malloc (sizeof(char) * (nbr_len(n) + 1))))
+	ptr = (char *) malloc (sizeof(char) * (nbr_len(n) + 1));
+	if (!ptr)
 		return (NULL);
+	nbr = n;
 	ret = ptr;
 	if (nbr < 0)
 		nbr = -nbr;

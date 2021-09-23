@@ -6,7 +6,7 @@
 /*   By: tjun-ren <tjun-ren@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/22 18:02:19 by tjun-ren          #+#    #+#             */
-/*   Updated: 2021/09/23 16:34:28 by tjun-ren         ###   ########.fr       */
+/*   Updated: 2021/09/24 02:37:15 by tjun-ren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,8 @@ char	*ft_strmapi(const char *s, char (*f)(unsigned int, char))
 		return (NULL);
 	i = 0;
 	len = ft_strlen(s);
-	if (!(ptr = (char *) malloc(sizeof(char) * (len + 1))))
+	ptr = (char *) malloc(sizeof(char) * (len + 1)));
+	if (!ptr)
 		return (NULL);
 	while (s[i])
 	{
