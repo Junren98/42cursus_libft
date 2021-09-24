@@ -6,7 +6,7 @@
 /*   By: tjun-ren <tjun-ren@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/20 12:50:24 by tjun-ren          #+#    #+#             */
-/*   Updated: 2021/09/21 14:43:09 by tjun-ren         ###   ########.fr       */
+/*   Updated: 2021/09/24 23:09:15 by tjun-ren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ size_t	count_word(char *s, char c)
 	char	*ptr1;
 	size_t	count;
 
+	count = 0;
 	ptr1 = s;
 	while(*ptr1)
 		if (*ptr1++ == c)
