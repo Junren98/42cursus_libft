@@ -6,7 +6,7 @@
 /*   By: tjun-ren <tjun-ren@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/22 18:02:19 by tjun-ren          #+#    #+#             */
-/*   Updated: 2021/09/24 02:37:15 by tjun-ren         ###   ########.fr       */
+/*   Updated: 2021/09/24 22:04:32 by tjun-ren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,6 @@
 // mapping using index
 #include <stdlib.h>
 #include "libft.h"
-
-/*size_t	ft_strlen(const char *c)
-{
-	char	*p;
-
-	p = (char *)c;
-	while (*p)
-		p++;
-	return (p - c);
-}*/
 
 char	*ft_strmapi(const char *s, char (*f)(unsigned int, char))
 {
@@ -37,7 +27,7 @@ char	*ft_strmapi(const char *s, char (*f)(unsigned int, char))
 		return (NULL);
 	i = 0;
 	len = ft_strlen(s);
-	ptr = (char *) malloc(sizeof(char) * (len + 1)));
+	ptr = (char *) malloc(sizeof(char) * (len + 1));
 	if (!ptr)
 		return (NULL);
 	while (s[i])

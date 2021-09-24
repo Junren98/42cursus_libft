@@ -6,7 +6,7 @@
 /*   By: tjun-ren <tjun-ren@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/17 16:34:32 by tjun-ren          #+#    #+#             */
-/*   Updated: 2021/09/24 02:37:00 by tjun-ren         ###   ########.fr       */
+/*   Updated: 2021/09/24 22:03:36 by tjun-ren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ static size_t	trim_len(char *s1, char *set)
 	ptr = s1;
 	while (*ptr)
 	{
-		ptr = ft_valid_trim(ptr, set);
+		ptr = valid_trim(ptr, set);
 		if (*ptr)
 		{
 			count++;

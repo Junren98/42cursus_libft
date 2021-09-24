@@ -6,7 +6,7 @@
 /*   By: tjun-ren <tjun-ren@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 09:51:20 by tjun-ren          #+#    #+#             */
-/*   Updated: 2021/09/21 23:59:46 by tjun-ren         ###   ########.fr       */
+/*   Updated: 2021/09/24 03:20:11 by tjun-ren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	char	*ptr_dest;
 	char	*ptr_src;
-	char	*temp;
 
 	if (!dest && !src)
 		return (0);

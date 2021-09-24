@@ -6,11 +6,11 @@
 /*   By: tjun-ren <tjun-ren@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/21 14:53:34 by tjun-ren          #+#    #+#             */
-/*   Updated: 2021/09/24 02:38:54 by tjun-ren         ###   ########.fr       */
+/*   Updated: 2021/09/24 03:06:58 by tjun-ren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// outpus the integer n to the givve nfile descriptor
+// outpus the integer n to the give nfile descriptor
 #include <unistd.h>
 #include "libft.h"
 

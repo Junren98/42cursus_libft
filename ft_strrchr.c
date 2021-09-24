@@ -6,7 +6,7 @@
 /*   By: tjun-ren <tjun-ren@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 15:28:35 by tjun-ren          #+#    #+#             */
-/*   Updated: 2021/09/24 02:36:09 by tjun-ren         ###   ########.fr       */
+/*   Updated: 2021/09/24 22:03:20 by tjun-ren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,4 +34,5 @@ char	*ft_strrchr(const char *s, int c)
 			return (ptr);
 		ptr_s++;
 	}
+	return (ptr);
 }
