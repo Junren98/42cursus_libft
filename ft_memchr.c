@@ -6,7 +6,7 @@
 /*   By: tjun-ren <tjun-ren@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 16:23:49 by tjun-ren          #+#    #+#             */
-/*   Updated: 2021/09/24 01:44:10 by tjun-ren         ###   ########.fr       */
+/*   Updated: 2021/09/25 12:34:09 by tjun-ren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	ptr = (unsigned char *)s;
 	while (n--)
 	{
-		if (*ptr++ == c)
+		if (*ptr++ == (unsigned char)c)
 			return (--ptr);
 	}
 	return (NULL);

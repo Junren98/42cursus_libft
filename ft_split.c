@@ -6,7 +6,7 @@
 /*   By: tjun-ren <tjun-ren@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/20 12:50:24 by tjun-ren          #+#    #+#             */
-/*   Updated: 2021/09/24 23:09:15 by tjun-ren         ###   ########.fr       */
+/*   Updated: 2021/09/25 00:15:25 by tjun-ren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,17 +16,6 @@
 #include "libft.h"
 #include <stdlib.h>
 #include <stdio.h>
-
-size_t	ft_strlen(const char *c)
-{
-	char	*p;
-
-	p = (char *)c;
-	while (*p)
-		p++;
-	return (p - c);
-}
-
 
 size_t	count_word(char *s, char c)
 {

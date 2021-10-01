@@ -6,7 +6,7 @@
 /*   By: tjun-ren <tjun-ren@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 11:12:09 by tjun-ren          #+#    #+#             */
-/*   Updated: 2021/09/24 01:47:00 by tjun-ren         ###   ########.fr       */
+/*   Updated: 2021/09/25 12:33:05 by tjun-ren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	char		*ptr_dest;
-	const char	*ptr_src;
+	unsigned char	*ptr_dest;
+	unsigned char	*ptr_src;
 
-	ptr_dest = (char *)dest;
-	ptr_src = (char *)src;
+	ptr_dest = (unsigned char *)dest;
+	ptr_src = (unsigned char *)src;
 	if (ptr_src > ptr_dest)
 	{
 		while (n--)

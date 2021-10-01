@@ -6,7 +6,7 @@
 /*   By: tjun-ren <tjun-ren@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/16 23:05:34 by tjun-ren          #+#    #+#             */
-/*   Updated: 2021/09/24 02:36:16 by tjun-ren         ###   ########.fr       */
+/*   Updated: 2021/09/30 11:45:53 by tjun-ren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 	char	*ptr_s;
 	char	*substr;
 
-	if (ft_strlen(s) < start)
+	if ((unsigned int)ft_strlen(s) < start)
 		return (NULL);
 	ptr = (char *) malloc (sizeof(char) * (len + 1));
 	if (!ptr)

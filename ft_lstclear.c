@@ -1,30 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tjun-ren <tjun-ren@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/23 23:03:42 by tjun-ren          #+#    #+#             */
-/*   Updated: 2021/10/01 15:34:04 by tjun-ren         ###   ########.fr       */
+/*   Created: 2021/10/01 10:36:17 by tjun-ren          #+#    #+#             */
+/*   Updated: 2021/10/02 00:22:33 by tjun-ren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// allocate with malloc, returns new element
-// the varialbe content is init with the val of param 'content'
-// the varialbe 'next' is init to NULL
-// malloc *ptr / t_list
+// delete and frees the given element and every successor of that element,
+// using function 'del' and free
+// pointer to the list must be set to NULL 
 #include "libft.h"
 #include <stdlib.h>
 
-t_list	*ft_lstnew(void *content)
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list	*ptr;
+	t_list	*temp;
 
-	ptr = (t_list *) malloc(sizeof(t_list));
-	if (!ptr)
-		return (NULL);
-	ptr->content = content;
-	ptr->next = NULL;
-	return (ptr);
+	if (!del || !(*lst))
+		return ;
+	ptr = *lst;
+	while (ptr)
+	{
+		temp = ptr->next;
+		del(ptr->content);
+		free(ptr);
+		ptr = temp;
+	}
+	*lst = NULL;
 }

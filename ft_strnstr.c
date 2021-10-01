@@ -6,7 +6,7 @@
 /*   By: tjun-ren <tjun-ren@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 21:43:36 by tjun-ren          #+#    #+#             */
-/*   Updated: 2021/09/24 02:36:05 by tjun-ren         ###   ########.fr       */
+/*   Updated: 2021/09/27 08:39:46 by tjun-ren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,27 +15,34 @@
 // char after '\0' is not search
 // return s1, when s2 is empty. s2 no occurs in s1, NULL return.
 // otherwise return a ptr to the 1st char of the 1st occur of s1 is returned.
-// -lbsd
+// If	s2 is an empty string, s1 is returned; if s2 occurs nowhere
+// in	s1, NULL is returned; otherwise a pointer to the first	character of
+// the first occurrence of s2 is returned.
+
 #include <stddef.h>
 #include "libft.h"
 
 char	*ft_strnstr(const char *s1, const char *s2, size_t n)
 {
-	char	*ptr1;
-	char	*ptr2;
-	char	*re_ptr;
+	size_t	i;
+	size_t	j;
 
-	ptr1 = (char *)s1;
-	ptr2 = (char *)s2;
+	i = 0;
 	if (*s2 == '\0')
-		return (ptr1);
-	while (n-- && *ptr1 != '\0')
+		return ((char *)s1);
+	while (i < n && s1[i] != '\0')
 	{
-		re_ptr = ptr1;
-		ptr2 = (char *)s2;
-		while (*ptr1++ == *ptr2++)
-			if (*ptr2 == '\0')
-				return (re_ptr);
+		j = 0;
+		if (s1[i] == s2[j])
+		{
+			while (i + j < n && s1[i + j] == s2[j])
+			{
+				j++; 
+				if (s2[j] == '\0')
+					return ((char *)&(s1[i]));
+			}
+		}
+		i++;
 	}
 	return (NULL);
 }

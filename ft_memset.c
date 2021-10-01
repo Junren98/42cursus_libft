@@ -6,7 +6,7 @@
 /*   By: tjun-ren <tjun-ren@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 15:45:58 by tjun-ren          #+#    #+#             */
-/*   Updated: 2021/09/24 01:47:56 by tjun-ren         ###   ########.fr       */
+/*   Updated: 2021/09/27 00:34:17 by tjun-ren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@
 
 void	*ft_memset(void *s, int c, size_t n)
 {
-	char	*ptr;
+	unsigned char	*ptr;
 
 	ptr = s;
 	while (n--)
-		*ptr++ = c;
+		*ptr++ = (unsigned char)c;
 	return (s);
 }

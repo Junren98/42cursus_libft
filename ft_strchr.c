@@ -6,7 +6,7 @@
 /*   By: tjun-ren <tjun-ren@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 15:01:53 by tjun-ren          #+#    #+#             */
-/*   Updated: 2021/09/24 02:35:13 by tjun-ren         ###   ########.fr       */
+/*   Updated: 2021/09/25 13:06:43 by tjun-ren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,13 @@ char	*ft_strchr(const char *s, int c)
 	char	*ptr;
 
 	ptr = (char *)s;
-	while (ptr)
+	while (*ptr)
 	{	
-		if (*ptr == c)
+		if (*ptr == (char)c)
 			return (ptr);
 		ptr++;
 	}
+	if (*ptr == (char)c)
+		return (ptr);
 	return (NULL);
 }

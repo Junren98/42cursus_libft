@@ -6,7 +6,7 @@
 /*   By: tjun-ren <tjun-ren@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/12 15:39:13 by tjun-ren          #+#    #+#             */
-/*   Updated: 2021/09/24 02:38:00 by tjun-ren         ###   ########.fr       */
+/*   Updated: 2021/09/25 12:38:45 by tjun-ren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,10 @@
 
 size_t	ft_strlen(const char *c)
 {
-	char	*p;
+	unsigned char	*p;
 
-	p = (char *)c;
+	p = (unsigned char *)c;
 	while (*p)
 		p++;
-	return (p - c);
+	return (p - (unsigned char *)c);
 }

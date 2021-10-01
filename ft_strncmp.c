@@ -6,7 +6,7 @@
 /*   By: tjun-ren <tjun-ren@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 01:59:02 by tjun-ren          #+#    #+#             */
-/*   Updated: 2021/09/24 02:36:01 by tjun-ren         ###   ########.fr       */
+/*   Updated: 2021/09/25 14:40:18 by tjun-ren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,11 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	ptr2 = (unsigned char *)s2;
 	if (n == 0)
 		return (0);
-	while (n-- && *ptr1)
+	while (n && *ptr1)
 	{
 		if (*ptr1++ != *ptr2++)
 			return (*--ptr1 - *--ptr2);
+		n--;
 	}
 	if (n)
 		return (*ptr1 - *ptr2);
