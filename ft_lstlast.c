@@ -6,7 +6,7 @@
 /*   By: tjun-ren <tjun-ren@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/30 18:28:44 by tjun-ren          #+#    #+#             */
-/*   Updated: 2021/10/01 23:00:08 by tjun-ren         ###   ########.fr       */
+/*   Updated: 2021/10/02 11:36:48 by tjun-ren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,4 +20,4 @@ t_list	*ft_lstlast(t_list *lst)
 	while (lst->next)
 		lst = lst->next;
 	return (lst);
-}
+}	

@@ -6,7 +6,7 @@
 /*   By: tjun-ren <tjun-ren@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 21:43:36 by tjun-ren          #+#    #+#             */
-/*   Updated: 2021/09/27 08:39:46 by tjun-ren         ###   ########.fr       */
+/*   Updated: 2021/10/04 01:09:23 by tjun-ren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t n)
 		{
 			while (i + j < n && s1[i + j] == s2[j])
 			{
-				j++; 
+				j++;
 				if (s2[j] == '\0')
 					return ((char *)&(s1[i]));
 			}

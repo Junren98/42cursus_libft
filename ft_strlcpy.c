@@ -6,7 +6,7 @@
 /*   By: tjun-ren <tjun-ren@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/12 22:42:04 by tjun-ren          #+#    #+#             */
-/*   Updated: 2021/09/27 01:14:26 by tjun-ren         ###   ########.fr       */
+/*   Updated: 2021/10/02 17:14:03 by tjun-ren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 		while (--count != 0 && *ptr_s != '\0')
 			*dest++ = *ptr_s++;
 	if (count < size)
-		if (size != 0)
-			*dest = '\0';
+		*dest = '\0';
 	return (len_src);
 }

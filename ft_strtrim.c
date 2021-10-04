@@ -6,7 +6,7 @@
 /*   By: tjun-ren <tjun-ren@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/17 16:34:32 by tjun-ren          #+#    #+#             */
-/*   Updated: 2021/09/24 22:03:36 by tjun-ren         ###   ########.fr       */
+/*   Updated: 2021/10/04 01:06:48 by tjun-ren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,63 +18,43 @@
 #include <stdlib.h>
 #include "libft.h"
 
-// to check for the char needed to be trim
-static char	*valid_trim(char	*s1, char	*set)
+static int	first_position(const char *s1, const char *set)
 {
-	char	*ptr;
+	size_t	i;
 
-	ptr = s1;
-	while ((*ptr == *set) && (*ptr))
-	{
-		ptr++;
-		set++;
-	}
-	if (!(*set))
-		return (ptr);
-	return (s1);
+	i = 0;
+	while (ft_strchr(set, s1[i]) != 0 && i < ft_strlen(s1))
+		i++;
+	return (i);
 }
 
-// len of strim
-static size_t	trim_len(char *s1, char *set)
+static int	last_position(const char *s1, const char *set)
 {
-	char	*ptr;
-	size_t	count;
+	size_t	i;
 
-	count = 0;
-	ptr = s1;
-	while (*ptr)
-	{
-		ptr = valid_trim(ptr, set);
-		if (*ptr)
-		{
-			count++;
-			ptr++;
-		}
-	}
-	return (count);
+	i = ft_strlen(s1) - 1;
+	while (ft_strchr(set, s1[i]) != 0)
+		i--;
+	return (i);
 }
 
 char	*ft_strtrim(const char *s1, const char *set)
 {
-	char	*ptr1;
-	char	*ptr2;
-	char	*ptr_m;
-	char	*res;
-	size_t	len;
+	int		i;
+	int		j;
+	char	*ptr;
 
-	ptr1 = (char *)s1;
-	ptr2 = (char *)set;
-	len = trim_len(ptr1, ptr2);
-	ptr_m = (char *) malloc (sizeof(char) * (len + 1));
-	if (!ptr_m)
+	if (!s1)
+		return (ft_strdup(""));
+	if (!set)
+		return ((char *)s1);
+	i = first_position(s1, set);
+	j = last_position(s1, set);
+	if (i > j)
+		return (ft_strdup(""));
+	ptr = (char *) malloc (sizeof(char) * (j - i + 1 + 1));
+	if (!ptr)
 		return (NULL);
-	res = ptr_m;
-	while (*ptr1)
-	{
-		ptr1 = valid_trim(ptr1, ptr2);
-		if (*ptr1)
-			*ptr_m++ = *ptr1++;
-	}
-	*ptr_m = '\0';
-	return (res);
+	ft_strlcpy(ptr, s1 + i, (j - i + 1 + 1));
+	return (ptr);
 }
