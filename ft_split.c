@@ -6,7 +6,7 @@
 /*   By: tjun-ren <tjun-ren@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/20 12:50:24 by tjun-ren          #+#    #+#             */
-/*   Updated: 2021/10/04 16:47:48 by tjun-ren         ###   ########.fr       */
+/*   Updated: 2021/10/04 21:13:22 by tjun-ren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 // the array must ended with NULL pointer
 #include "libft.h"
 #include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
 
 static	int	count_word(const char *s, char c)
 {

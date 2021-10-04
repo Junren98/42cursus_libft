@@ -25,7 +25,7 @@ CFLAGS = -Wall -Wextra -Werror
 
 all: ${NAME}
 
-${NAME} : ${OBJS}
+$(NAME) : ${OBJS}
 	ar rcs ${NAME} ${OBJS}
 
 bonus: ${BONUS_OBJS}

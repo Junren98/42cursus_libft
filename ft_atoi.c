@@ -6,7 +6,7 @@
 /*   By: tjun-ren <tjun-ren@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 15:07:20 by tjun-ren          #+#    #+#             */
-/*   Updated: 2021/09/24 01:29:57 by tjun-ren         ###   ########.fr       */
+/*   Updated: 2021/10/04 21:49:57 by tjun-ren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 int	ft_atoi(const char	*str)
 {
-	int		num;
+	long	num;
 	int		count_nve;
 	char	*ptr;
 
