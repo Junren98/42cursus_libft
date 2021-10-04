@@ -6,7 +6,7 @@
 /*   By: tjun-ren <tjun-ren@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 01:59:02 by tjun-ren          #+#    #+#             */
-/*   Updated: 2021/09/25 14:40:18 by tjun-ren         ###   ########.fr       */
+/*   Updated: 2021/10/04 17:45:03 by tjun-ren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 // from the array pointed by s1 to that pointed to by s2
 // return 
 #include <stddef.h>
-#include <stdio.h>
 #include "libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)

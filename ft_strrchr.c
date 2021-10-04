@@ -6,7 +6,7 @@
 /*   By: tjun-ren <tjun-ren@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 15:28:35 by tjun-ren          #+#    #+#             */
-/*   Updated: 2021/09/24 22:03:20 by tjun-ren         ###   ########.fr       */
+/*   Updated: 2021/10/04 17:46:08 by tjun-ren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,6 @@
 // '\0' is included part of str 
 // should use if(!*ptr_s)
 // return pointer to the byte of a null pointer when c dont occur in the str
-#include <stddef.h>
-#include <stdio.h>
 #include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
