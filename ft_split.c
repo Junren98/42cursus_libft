@@ -6,7 +6,7 @@
 /*   By: tjun-ren <tjun-ren@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/20 12:50:24 by tjun-ren          #+#    #+#             */
-/*   Updated: 2021/10/04 21:13:22 by tjun-ren         ###   ########.fr       */
+/*   Updated: 2021/10/05 21:55:13 by tjun-ren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,6 +83,8 @@ char	**ft_split(const char *s, char c)
 	char	*word;
 
 	ptr_s = (char *)s;
+	if (!ptr_s)
+		return (NULL);
 	ct_word = count_word(ptr_s, c);
 	ptr = (char **) malloc (sizeof(char *) * (ct_word + 1));
 	if (ptr == NULL)
