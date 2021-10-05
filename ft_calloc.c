@@ -6,7 +6,7 @@
 /*   By: tjun-ren <tjun-ren@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/16 16:59:13 by tjun-ren          #+#    #+#             */
-/*   Updated: 2021/09/24 02:25:06 by tjun-ren         ###   ########.fr       */
+/*   Updated: 2021/10/05 18:30:49 by tjun-ren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@ void	*ft_calloc(size_t nelem, size_t elsize)
 {
 	void	*ptr;
 
-	if (nelem == 0 || elsize == 0)
-		return (NULL);
 	ptr = malloc (elsize * nelem);
+	if (ptr == 0)
+		return (NULL);
 	ft_memset(ptr, 0, (nelem * elsize));
 	return (ptr);
 }

@@ -6,7 +6,7 @@
 /*   By: tjun-ren <tjun-ren@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 18:07:25 by tjun-ren          #+#    #+#             */
-/*   Updated: 2021/10/04 21:45:34 by tjun-ren         ###   ########.fr       */
+/*   Updated: 2021/10/05 18:38:49 by tjun-ren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,15 +25,12 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 		return (0);
 	ptr1 = (unsigned char *)s1;
 	ptr2 = (unsigned char *)s2;
+	if (!s1 || !s2)
+		return (0);
 	while (n-- > 0)
 	{
 		if (*ptr1++ != *ptr2++)
-		{
-			if (*--ptr1 > *--ptr2)
-				return (1);
-			else
-				return (-1);
-		}
+			return (*--ptr1 - *--ptr2);
 	}
 	return (0);
 }
